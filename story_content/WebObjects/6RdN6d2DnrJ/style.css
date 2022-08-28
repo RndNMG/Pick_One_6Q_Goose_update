@@ -1,0 +1,117 @@
+html,
+body {
+  margin: 0 0 0 0;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  transition: opacity 0.25s;
+}
+
+#canvas {
+  z-index: 1000;
+  /* box-shadow: 0px 0px 26px -5px #ccc; */
+  border-radius: 15px;
+  transition: background-color 0.25s;
+  width: 969px;
+}
+
+.nav {
+  width: 79px;
+  height: 430px;
+  position: absolute;
+  right: 0px;
+  top: 48px;
+  transform: translateX(-10%);
+  z-index: 0;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0px -1px 0px inset;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 25px;
+  align-content: center;
+}
+
+.nav * {
+  height: 65px;
+  width: 60px;
+  transition: transform 0.25s;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin: 5px 3px;
+}
+
+#eraser,
+#clear,
+#fillBg {
+  outline: none;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#eraser:hover,
+#clear:hover,
+#fillBg:hover,
+#eraser.active,
+.clr:hover,
+.clr.active,
+#clear.active,
+#fillBg.active {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 1px gray;
+}
+
+#fillBg {
+  background-image: url("./assets/Paper-Normal.png");
+}
+#fillBg.active {
+  background-image: url("./assets/Paper-Selected.png");
+}
+#fillBg:hover,
+#fillBg.active:hover {
+  background-image: url("./assets/Paper-Hover.png");
+}
+
+#eraser {
+  background-image: url("./assets/Eraser-Normal.png");
+}
+#eraser.active {
+  background-image: url("./assets/Eraser-Selected.png");
+}
+#eraser:hover,
+#eraser.active:hover {
+  background-image: url("./assets/Eraser-Hover.png");
+}
+
+#clear {
+  background-image: url("./assets/Delete-Normal.png");
+}
+
+#clear:hover,
+#clear.active:hover {
+  background-image: url("./assets/Delete-Hover.png");
+}
+#clear.active {
+  background-image: url("./assets/Delete-Selected.png");
+}
+
+.clr:nth-child(2) {
+  background-color: #000;
+}
+
+.clr:nth-child(3) {
+  background-color: #ff0000;
+}
+
+.clr:nth-child(4) {
+  background-color: chartreuse;
+}
